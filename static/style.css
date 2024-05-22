@@ -51,6 +51,22 @@ button {
     border-radius: 10px;
 }
 
+.resume-shortcut-sidebar {
+    float: left;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.resume-shortcut {
+    padding: 8px 10px;
+}
+
+.resume-shortcut:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
 .resume-skills-section {
     margin: 10px;
     padding: 20px;
@@ -61,8 +77,11 @@ button {
 
 .bio-img-container {
     position: relative;
-    width: 300px;
-    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 560px;
 }
 
 .bio-img-container img {
@@ -81,7 +100,15 @@ button {
     z-index: -2;
 }
 
-.bio-text {
+#bio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px white solid;
+    padding: 20px;
+}
+
+#bio-text {
     display: none;
     border-radius: 10px;
     background-color: white;

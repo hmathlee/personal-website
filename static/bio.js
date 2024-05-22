@@ -18,7 +18,7 @@ document.addEventListener("mousemove", function(e) {
 
         canvasContext.drawImage(blackBackgroundImg, 0, 0, w, h);
 
-        const pixel = canvasContext.getImageData(x, y, 1, 1).data;
+        const pixel = canvasContext.getImageData(x - rect.left, y - rect.top, 1, 1).data;
         if (pixel[0] > 0 || pixel[1] > 0 || pixel[2] > 0) {
             segmentedImg.addEventListener("click", popupBio);
             segmentedImg.style.cursor = "pointer";
@@ -34,8 +34,9 @@ document.addEventListener("mousemove", function(e) {
     }
 })
 
-const bioText = document.getElementsByClassName("bio-text")[0];
+const bioContainer = document.getElementById("bio-container");
+const bioText = document.getElementById("bio-text");
 
 function popupBio() {
-    bioText.style.display = "block";
+    bioContainer.innerHTML = bioText.innerHTML;
 }
