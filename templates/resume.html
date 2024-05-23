@@ -31,7 +31,7 @@
     </div>
 
     <div>
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h1 style="font-size:40px;">Hoseok Lee</h1>
             <div style="font-size:26px;">
                 Machine Learning Engineer
@@ -41,7 +41,7 @@
         <br>
         <hr>
 
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h2 style="font-size:30px;">Summary</h2>
             <ul style="list-style-type:square;">
                 <li>Machine Learning engineer with expertise in <b>training, evaluating, and deploying deep learning models</b>
@@ -54,7 +54,7 @@
 
         </div>
 
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h2 style="font-size:30px;">Skills</h2>
             <div style="display:grid; grid-template-columns: auto auto auto">
                 <div class="resume-skills-section">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h2 style="font-size:30px;">Experience</h2>
 
             <div>
@@ -136,11 +136,11 @@
                     <em style="float:right; font-size:18px;">SEP-DEC 2021</em>
                 </div>
                 <br>
-                HUAWEI TECHNOLOGIES CO LTD
+                HUAWEI TECHNOLOGIES CO LTD - WATERLOO DATA SECURITY AND PRIVACY PROTECTION LAB
                 <ul style="list-style-type:square;">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                    <li>Devised a statistical method for PyTorch regression model watermark verification</li>
+                    <li>Focused research on bridging the gap between classification watermarking schemes and regression counterpart</li>
+                    <li>Validated regression watermarking scheme using <b>Python</b> and <b>Bash</b> scripts</li>
                 </ul>
             </div>
 
@@ -152,14 +152,14 @@
                 <br>
                 UNIVERSITY OF WATERLOO - DEPARTMENT OF APPLIED MATHEMATICS
                 <ul style="list-style-type:square;">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                    <li>Laid the groundwork for comprehensive and precise eye-gaze analysis for patients diagnosed with ASD</li>
+                    <li>Employed a <b>fully convolutional network (FCN) architecture for semantic image segmentation</b></li>
+                    <li>Implemented <b>network analysis centrality measures</b> to determine viewing patterns of ASD individuals</li>
                 </ul>
             </div>
         </div>
 
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h2 style="font-size:30px;">Publications</h2>
 
             Wu, D.; Smith, D.; VanBerlo, B.; Roshankar, A.; Lee, H.; Li, B.; Ali, F.; Rahman, M.; Basmaji, J.;
@@ -170,26 +170,65 @@
             <br>
         </div>
 
-        <div style="line-height:20px;">
+        <div style="line-height:24px;">
             <h2 style="font-size:30px;">Selected Projects</h2>
 
             <div>
-                <div style="padding-right:10px;">
+                <div style="padding:16px; border:1px solid white; border-radius:25px;">
                     <b style="float:left; font-size:18px;">Chatbot Web Application</b>
+                    <br>
+                    <br>
+                    In recent months, students have been using ChatGPT to assist with their studies (e.g. summarization,
+                    alternative concept explanations). However, due to GPT's broad approach to text generation, AI
+                    responses have been relatively unhelpful for highly context-specific user queries. Rather than
+                    fine-tuning a GPT model, which can be time-consuming, <b>information retrieval</b> provides a solution.
+                    <br>
+                    <br>
+                    In particular, <b>vector-based retrieval</b> has demonstrated powerful use cases for context-specific
+                    text generation, especially when semantic meaning must be preserved. I'm currently building a chatbot
+                    web application using <b>LangChain's RAG (retrieval-augmented generation) capabilities</b>, paired
+                    with <b>Chroma's vector database</b> to act as an AI study partner, robust to advanced university
+                    course material.
+                    <br>
+                    <br>
+                    The application allows users to upload course notes (currently, only PDF files are accepted).
+                    <b>User isolation</b> is enforced via a bucket-per-user model in <b>Google Cloud Storage</b> to
+                    organize user files. <b>Chat persistence</b> is supported thanks to <b>Upstash Redis</b>, so that
+                    users can get a more conversational experience with the app.
+                    <br>
+                    <br>
+                    My current version provides a user interface through <b>FastAPI (with Jinja2 templating)</b>. I
+                    initially had a proof-of-concept using <b>Streamlit</b>, but quickly realized I needed to migrate
+                    to further customize the UI.
                 </div>
             </div>
 
-            <br>
             <br>
 
             <div>
-                <div style="padding-right:10px;">
+                <div style="padding:16px; border:1px solid white; border-radius:25px;">
                     <b style="float:left; font-size:18px;">Kaggle Classification Competition</b>
+                    <br>
+                    <br>
+                    For the course <em>STAT 441 - Classification</em> at Waterloo, the final project was a Kaggle
+                    competition. The task was to predict, using statistical methods covered in the course, the religious
+                    beliefs of European individuals on a scale of 1 to 5.
+                    <br>
+                    <br>
+                    I led a small team (3 members in total) throughout the project. Our team performed <b>exploratory data
+                    analysis using Tableau</b> to uncover feature correlations. Next, we applied <b>feature engineering
+                    using pandas and scikit-learn</b> to a dataframe of 438 anonymous survey responses, which <b>reduced
+                    downstream feature selection time by over 80%</b>.
+                    <br>
+                    <br>
+                    Features were selected using <b>XGBoost</b>, and several models (e.g. XGBoost, <b>random forest, kNN</b>)
+                    were stacked for prediction. We made several engineering improvements to our pipeline, including
+                    <b>model persistence, CUDA support, and training callbacks with TensorBoard integration</b>.
+                    <br>
+                    <br>
+                    Overall, we <b>achieved 6th place out of 41 teams on the public test dataset.</b>
                 </div>
             </div>
-
-            <br>
-            <br>
         </div>
 
         <div style="line-height:24px;">
