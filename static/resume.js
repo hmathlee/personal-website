@@ -5,7 +5,7 @@ for (const s of shortcuts) {
         for (const h2 of level2Headers) {
             if (s.innerHTML == h2.innerHTML) {
                 const rect = h2.getBoundingClientRect();
-                window.scrollTo(rect.left + window.scrollX, rect.top + window.scrollY - 10);
+                window.scrollTo(0, rect.top + window.scrollY - 10);
                 break;
             }
         }
