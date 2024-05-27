@@ -122,11 +122,9 @@
                 <br>
                 DEEP BREATHE
                 <ul style="list-style-type:square;">
-                    <li>Collaborated on experimental design to evaluate locally trained lung sliding detector on
-                        internationally collected ultrasound scan data</li>
-                    <li>Generated <b>SQL queries</b> to group data and avoid cross-patient codependence; scraped additional
-                        data from online sources to evaluate model on datasets of varying quality</li>
-                    <li>Achieved <b>92% fine-tuned detection model recall</b> on international data</li>
+                    <li>Collaborated on the design of <b>threshold-aware accumulative fine-tuning (TAAFT)</b> to evaluate a lung sliding detector on external ultrasound scan data from multiple institutions</li>
+                    <li>Stratified data by patient using <b>SQL</b>. Implemented the TAAFT data pipeline with TensorFlow/Keras, from generation to training/evaluation.</li>
+                    <li>Achieved <b>92% sensitivity, 82% specificity</b> in detecting absent lung sliding</li>
                 </ul>
             </div>
 
