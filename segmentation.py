@@ -1,24 +1,28 @@
+# Torch
 from torchvision.models.detection import maskrcnn_resnet50_fpn_v2, MaskRCNN_ResNet50_FPN_V2_Weights
 import torchvision.transforms.functional as F
 
+# Other
+from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from PIL import Image
 
+# Image to tensor
 img = Image.open("images/me.JPG")
 img_tensor = F.to_tensor(img).unsqueeze(0)
 
+# Pretrained Mask R-CNN (shows my segmented outline in the photo when user hovers mouse over me)
 weights = MaskRCNN_ResNet50_FPN_V2_Weights.DEFAULT
 model = maskrcnn_resnet50_fpn_v2(weights=weights)
 model.eval()
 
+# Get masks, scores, labels
 prediction = model(img_tensor)[0]
 masks = prediction["masks"].squeeze(1)
 scores = prediction["scores"]
 labels = prediction["labels"]
 
-filter_idx = scores > 0.5
-
+# Filter masks/labels
 filtered_masks = masks[scores > 0.5]
 filtered_labels = labels[scores > 0.5]
 
